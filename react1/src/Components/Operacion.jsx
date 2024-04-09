@@ -1,3 +1,3 @@
-const Operacion = ({ num1, num2 }) => num1 * num2
+const Operacion = () => console.log(111);
 
-export default C
+export default Operacion

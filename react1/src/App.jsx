@@ -81,10 +81,9 @@ const App = () => {
                 <div>
                     <input type="text" onChange={e => setNum1(e.target.value)} />
                     <input type="text" onChange={e => setNum2(e.target.value)} />
-                    <button onClick={Operacion = { num1, num2 }}>calcular</button>
+                    <button onClick={() => <Operacion op={num1} />}>calcular</button>
                     <span></span>
                 </div>
-                <C />
             </div>
         </>
     )
