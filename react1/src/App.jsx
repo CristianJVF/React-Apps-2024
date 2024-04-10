@@ -78,22 +78,22 @@ const App = () => {
                 <br />
                 <img src={image} alt="#" />
             </div>
-            <div>
-                {Books.map(b => <Book book={b} />)}
 
-                {Countries.map(c => <Countrie countrieobj={c} />)}
+            {Books.map(b => <Book book={b} />)}
 
-                <Operacion SetOperacion={SetOper} />
-                {/* <Pintar SetPintar={op} /> */}
+            {Countries.map(c => <Countrie countrieobj={c} />)}
 
-                <SubirBajar SetValue={SetVal} />
-                <div>{val}</div>
+            <Operacion SetOperacion={SetOper} />
+            {/* <Pintar SetPintar={op} /> */}
 
-                <button onClick={() => setColor(color == true ? false : true)}>Cambiar color</button>
-                <Box color={color}>
-                    <h1>hola que tal</h1>
-                </Box>
-            </div >
+            <SubirBajar SetValue={SetVal} />
+            <div>{val}</div>
+
+            <button onClick={() => setColor(color == true ? false : true)}>Cambiar color</button>
+            <Box color={color}>
+                <h1>hola que tal</h1>
+            </Box>
+
         </>
     )
 }

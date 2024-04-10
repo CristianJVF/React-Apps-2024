@@ -1,12 +1,12 @@
 import { useState } from "react"
+let num = 0
 
 const SubirBajar = ({ SetValue }) => {
-    const [num, setNum] = useState(0)
     return (
         <div>
-            <button onClick={() => { setNum(num - 1); SetValue(num - 1) }}>-</button>
-            <input type="number" value={num} />
-            <button onClick={() => { setNum(num + 1); SetValue(num + 1) }}>+</button>
+            <button onClick={() => { SetValue(num -= 1) }}>-</button>
+            <input type="number" onchange={e => SetValue(e)} />
+            <button onClick={() => { SetValue(num += 1) }}>+</button>
         </div>
     )
 }
