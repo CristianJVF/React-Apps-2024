@@ -5,6 +5,10 @@ import Operacion from "./Components/Operacion";
 import Book from "./Components/Book";
 import Books from "./Data/Books.json";
 import Countries from "./Data/Countries.json";
+// import Pintar from "./Components/Pintar";
+import SubirBajar from "./Components/C1";
+import { } from "module";
+import Box from "./Data/styles"
 
 const images = {
     img1: "http://via.placeholder.com/111x111",
@@ -31,9 +35,11 @@ const App = () => {
 
     const [image, setImage] = useState(images.img1)
 
-    const [num1, setNum1] = useState()
-    const [num2, setNum2] = useState()
+    const [op, SetOper] = useState()
 
+    const [val, SetVal] = useState()
+
+    const [color, setColor] = useState()
 
     return (
         <>
@@ -74,19 +80,22 @@ const App = () => {
             </div>
             <div>
                 {Books.map(b => <Book book={b} />)}
-                <div id="container">
-                    {Countries.map(c => <Countrie countrieobj={c} />)}
-                </div>
 
-                <div>
-                    <input type="text" onChange={e => setNum1(e.target.value)} />
-                    <input type="text" onChange={e => setNum2(e.target.value)} />
-                    <button onClick={() => <Operacion op={num1} />}>calcular</button>
-                    <span></span>
-                </div>
-            </div>
+                {Countries.map(c => <Countrie countrieobj={c} />)}
+
+                <Operacion SetOperacion={SetOper} />
+                {/* <Pintar SetPintar={op} /> */}
+
+                <SubirBajar SetValue={SetVal} />
+                <div>{val}</div>
+
+                <button onClick={() => setColor(color == true ? false : true)}>Cambiar color</button>
+                <Box color={color}>
+                    <h1>hola que tal</h1>
+                </Box>
+            </div >
         </>
     )
 }
 
-export default App
+export default App 
