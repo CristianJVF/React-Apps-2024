@@ -1,14 +1,19 @@
 import { useRef } from "react"
 import { useState } from "react"
-import Countrie from "./Components/Countrie";
+import Countrie from "./Components/Countries/Countrie";
 import Operacion from "./Components/Operacion";
 import Book from "./Components/Book";
 import Books from "./Data/Books.json";
-import Countries from "./Data/Countries.json";
+import Countries from "./Components/Countries/Countries.json";
 // import Pintar from "./Components/Pintar";
 import SubirBajar from "./Components/C1";
 import { } from "module";
 import Box from "./Data/styles"
+import Popup from "./Components/Popup";
+import { GlobalStyles } from "./app/GlobalStyles";
+import ComponenteBox from "./Components/box/GlobalStyle";
+import { Container } from "./Components/Countries/StyledCountries";
+import Teatro from "./Components/Teatro/CompTeatro";
 
 const images = {
     img1: "http://via.placeholder.com/111x111",
@@ -18,31 +23,29 @@ const images = {
 
 const App = () => {
     const [inputref, setContador] = useState()
-
     const [centigradosref, setCentigrados] = useState()
     const [farenheitref, setCounter] = useState(0)
-
     const anchoref = useRef()
     const altoref = useRef()
     const supeficieref = useRef()
     const Calcular = () => {
         supeficieref.current.value = anchoref.current.value * altoref.current.value
     }
-
     const [withref, setwith] = useState()
     const [heigthref, setheigth] = useState()
     const [superficieref, setSuperficie] = useState()
-
     const [image, setImage] = useState(images.img1)
-
     const [op, SetOper] = useState()
-
     const [val, SetVal] = useState()
-
     const [color, setColor] = useState()
+    const [visible, setVisible] = useState()
 
     return (
         <>
+            <GlobalStyles />
+            <ComponenteBox />
+            <button onClick={() => setVisible(!visible)}>Abrir/Cerrar</button>
+            <Popup visible={visible} setVisible={setVisible} />
             <div>
                 {/* Utilizando useState() para renderizar letra por letra el resultado en el output, no necesita boton ni guardar en una constante el resultado
                 y recogemos el target.value del input no el current.value como con useRfe */}
@@ -80,19 +83,22 @@ const App = () => {
             </div>
 
             {Books.map(b => <Book book={b} />)}
-
-            {Countries.map(c => <Countrie countrieobj={c} />)}
-
+            <Container>
+                {Countries.map(c => <Countrie countrieobj={c} />)}
+            </Container>
             <Operacion SetOperacion={SetOper} />
             {/* <Pintar SetPintar={op} /> */}
 
             <SubirBajar SetValue={SetVal} />
             <div>{val}</div>
 
-            <button onClick={() => setColor(color == true ? false : true)}>Cambiar color</button>
+            {/* (!color) es igual a (color ? false : true) */}
+            <button onClick={() => setColor(color ? false : true)}>Cambiar color</button>
             <Box color={color}>
                 <h1>hola que tal</h1>
             </Box>
+
+            <Teatro />
 
         </>
     )
