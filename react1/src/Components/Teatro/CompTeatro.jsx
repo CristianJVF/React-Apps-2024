@@ -1,6 +1,6 @@
-import { Libreto } from './StyledTeatro'
-import LibretoArray from './Teatro.json'
 import { useState } from "react"
+import LibretoArray from './Teatro.json'
+import { P } from './StyledTeatro'
 
 const Teatro = () => {
     const [line, setLine] = useState(0)
@@ -8,9 +8,11 @@ const Teatro = () => {
         <>
             <div>
                 <button onClick={() => setLine(line - 1)} >Anterior</button>
-                <button>Siguiente</button>
+                <button onClick={() => setLine(line + 1)} >Siguiente</button>
             </div>
-            <Libreto>{LibretoArray.map(e => <p>{e}</p>)}</Libreto>
+            {
+                LibretoArray.map((e, i) => <P lineposition={i == line} >{e}</P>)
+            }
         </>
     )
 }

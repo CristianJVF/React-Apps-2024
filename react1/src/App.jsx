@@ -14,6 +14,7 @@ import { GlobalStyles } from "./app/GlobalStyles";
 import ComponenteBox from "./Components/box/GlobalStyle";
 import { Container } from "./Components/Countries/StyledCountries";
 import Teatro from "./Components/Teatro/CompTeatro";
+import Trivial from "./Components/trivial/Trivial";
 
 const images = {
     img1: "http://via.placeholder.com/111x111",
@@ -99,6 +100,7 @@ const App = () => {
             </Box>
 
             <Teatro />
+            <Trivial />
 
         </>
     )
