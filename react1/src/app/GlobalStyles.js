@@ -13,12 +13,32 @@ body{
         font-family: myFont;
         src: url(${monospace});
     }
-    background-color: bisque;
 }
 
 p {
-    border-radius: 5px;
-    
+    border-radius: 5px
 }
 
+input {
+    border: 1px solid aqua;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+input:hover {
+    background-color: azure;
+}
+
+button {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    border: 1px solid aqua;
+}
+
+button:hover {
+    background-color: aquamarine;
+}
 `
