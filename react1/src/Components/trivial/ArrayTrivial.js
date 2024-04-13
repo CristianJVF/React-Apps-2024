@@ -9,19 +9,19 @@ const Questions = [
         "img": img1,
         "options": [{
             "answer": "Francia",
-            "key": "true"
+            "key": true
         },
         {
             "answer": "Rusia",
-            "key": "false"
+            "key": false
         },
         {
             "answer": "EEUU",
-            "key": "false"
+            "key": false
         },
         {
             "answer": "España",
-            "key": "false"
+            "key": false
         }]
     },
     {
@@ -29,19 +29,19 @@ const Questions = [
         "img": img2,
         "options": [{
             "answer": "La duquesa de no se que",
-            "key": "true"
+            "key": true
         },
         {
             "answer": "Pablo",
-            "key": "false"
+            "key": false
         },
         {
             "answer": "Erick",
-            "key": "false"
+            "key": false
         },
         {
             "answer": "Joe",
-            "key": "false"
+            "key": false
         }]
     },
     {
@@ -49,19 +49,19 @@ const Questions = [
         "img": img3,
         "options": [{
             "answer": "Peso mexicano",
-            "key": "true"
+            "key": true
         },
         {
             "answer": "Dolar",
-            "key": "false"
+            "key": false
         },
         {
             "answer": "Euro",
-            "key": "false"
+            "key": false
         },
         {
             "answer": "Lempiras",
-            "key": "false"
+            "key": false
         }]
     }
 ]
