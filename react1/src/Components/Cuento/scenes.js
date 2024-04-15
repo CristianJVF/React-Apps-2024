@@ -1,7 +1,7 @@
-import espacio from '../img/espacio.jpg';
-import home from '../img/home.jpg';
-import monstruo from '../img/monstruo.jpg';
-import nave from '../img/nave.jpg';
+import espacio from '../../assets/imgCuento/espacio.jpg';
+import home from '../../assets/imgCuento/home.jpg';
+import monstruo from '../../assets/imgCuento/monstruo.jpg';
+import nave from '../../assets/imgCuento/nave.jpg';
 
 export default [
     {
