@@ -15,6 +15,8 @@ import ComponenteBox from "./Components/box/GlobalStyle";
 import { Container } from "./Components/Countries/StyledCountries";
 import Teatro from "./Components/Teatro/CompTeatro";
 import Trivial from "./Components/trivial/Trivial";
+import CompWorkout from "./Components/Workout/CompWorkout";
+import CompCuento from "./Components/Cuento/CompCuento";
 
 const images = {
     img1: "http://via.placeholder.com/111x111",
@@ -101,6 +103,8 @@ const App = () => {
 
             <Teatro />
             <Trivial />
+            <CompWorkout />
+            <CompCuento />
 
         </>
     )
