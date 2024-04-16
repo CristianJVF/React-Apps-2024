@@ -1,6 +1,7 @@
 import { useState } from "react"
 import LibretoArray from './Teatro.json'
 import { P } from './StyledTeatro'
+import { Link } from 'react-router-dom';
 
 const Teatro = () => {
     const [line, setLine] = useState(0)
