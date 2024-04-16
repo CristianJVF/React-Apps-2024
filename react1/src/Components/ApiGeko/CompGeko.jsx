@@ -24,7 +24,7 @@ const CompGeko = () => {
             <div>
                 <button onClick={() => setV(v + 1)}>Pulsar</button>
                 {v}
-                <h4>{d[0].name}</h4></div>
+                <h4></h4></div>
         </GekoDiv>
     )
 }

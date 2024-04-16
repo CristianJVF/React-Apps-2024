@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { CompP } from './StyledComponents2'
 
-export const CompBox = styled.div`
+export const BoxDiv = styled.div`
 width: 1200px;
 height: 300px;
 background-color: gray;

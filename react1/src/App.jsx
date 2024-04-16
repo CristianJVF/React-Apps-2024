@@ -1,23 +1,15 @@
 import { useRef } from "react"
 import { useState } from "react"
 import Router from './app/Router';
-import Countrie from "./Components/Countries/Countrie";
 import Operacion from "./Components/Operacion";
 import Book from "./Components/Book";
 import Books from "./Data/Books.json";
-import Countries from "./Components/Countries/Countries.json";
 // import Pintar from "./Components/Pintar";
 import SubirBajar from "./Components/C1";
 import { } from "module";
-import Box from "./Data/styles"
+
 import Popup from "./Components/Popup";
 import { GlobalStyles } from "./app/GlobalStyles";
-import ComponenteBox from "./Components/Box/GlobalStyle";
-import { Container } from "./Components/Countries/StyledCountries";
-
-import Trivial from "./Components/Trivial/Trivial";
-import CompWorkout from "./Components/Workout/CompWorkout";
-import CompCuento from "./Components/Cuento/CompCuento";
 
 
 const images = {
@@ -42,14 +34,13 @@ const App = () => {
     const [image, setImage] = useState(images.img1)
     const [op, SetOper] = useState()
     const [val, SetVal] = useState()
-    const [color, setColor] = useState()
+
     const [visible, setVisible] = useState()
 
     return (
         <>
             <Router />
             <GlobalStyles />
-            <ComponenteBox />
             <button onClick={() => setVisible(!visible)}>Abrir/Cerrar</button>
             <Popup visible={visible} setVisible={setVisible} />
             <div>
@@ -89,9 +80,7 @@ const App = () => {
             </div>
 
             {Books.map(b => <Book book={b} />)}
-            <Container>
-                {Countries.map(c => <Countrie countrieobj={c} />)}
-            </Container>
+
             <Operacion SetOperacion={SetOper} />
             {/* <Pintar SetPintar={op} /> */}
 
@@ -100,13 +89,7 @@ const App = () => {
 
             {/* (!color) es igual a (color ? false : true) */}
             <button onClick={() => setColor(color ? false : true)}>Cambiar color</button>
-            <Box color={color}>
-                <h1>hola que tal</h1>
-            </Box>
 
-            <Trivial />
-            <CompWorkout />
-            <CompCuento />
 
         </>
     )
