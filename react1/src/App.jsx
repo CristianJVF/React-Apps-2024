@@ -1,14 +1,11 @@
 import { useRef } from "react"
 import { useState } from "react"
 import Router from './app/Router';
-import Operacion from "./Components/Operacion";
-import Book from "./Components/Book";
-import Books from "./Data/Books.json";
-// import Pintar from "./Components/Pintar";
-import SubirBajar from "./Components/C1";
+// import Pintar from "./components/Pintar";
+import SubirBajar from "./components/C1";
 import { } from "module";
 
-import Popup from "./Components/Popup";
+import Popup from "./components/Popup";
 import { GlobalStyles } from "./app/GlobalStyles";
 
 
@@ -79,9 +76,6 @@ const App = () => {
                 <img src={image} alt="#" />
             </div>
 
-            {Books.map(b => <Book book={b} />)}
-
-            <Operacion SetOperacion={SetOper} />
             {/* <Pintar SetPintar={op} /> */}
 
             <SubirBajar SetValue={SetVal} />

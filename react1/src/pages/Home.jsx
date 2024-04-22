@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
 
-const Home = () => (
-    <div>Estas en Home
 
-    </div>
-)
+const home = () => {
+    return (
+        <div>home</div>
+    )
+}
 
-export default Home;
+export default home

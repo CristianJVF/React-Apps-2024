@@ -1,13 +1,8 @@
-import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
 
 const Page2 = () => {
-    const { id } = useParams()
     return (
-        < div >
-            {id}
-        </div >
+        <div>Page2</div>
     )
 }
 
-export default Page2;
+export default Page2
